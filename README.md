@@ -30,7 +30,7 @@ project/
 ├── requirements.txt
 └── README.md
 '''
-
+---
 ## 📄 Assignment Deliverable: Single Python Script Explanation
 
 This project includes a single consolidated Python script (main.py) that documents and implements the complete AI pipeline.
