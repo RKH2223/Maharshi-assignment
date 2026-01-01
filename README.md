@@ -61,11 +61,11 @@ Selected Classes:
 - Bear
 
 Download Commands Used:
-
+```bash
 pip install openimages
 
 oid_v7_download --classes Person Dog Cat Horse Elephant Bear --type_data train validation --limit 5000 --dest datasets/part_a/
-
+```
 Annotations are used in Pascal VOC (XML) format.
 
 ---
