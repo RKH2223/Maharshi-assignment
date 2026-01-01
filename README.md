@@ -1,4 +1,3 @@
-@'
 # 🧠 AI Technical Assignment – Computer Vision & OCR (Offline)
 
 ## 📌 Overview
@@ -13,7 +12,6 @@ The system includes:
 
 ## 📂 Project Structure
 
-```text
 project/
 ├── datasets/
 │   ├── part_a/
@@ -29,8 +27,9 @@ project/
 ├── streamlit_app.py
 ├── requirements.txt
 └── README.md
-'''
+
 ---
+
 ## 📄 Assignment Deliverable: Single Python Script Explanation
 
 This project includes a single consolidated Python script (main.py) that documents and implements the complete AI pipeline.
