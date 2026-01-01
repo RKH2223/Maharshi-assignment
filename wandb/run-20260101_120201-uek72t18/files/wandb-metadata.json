@@ -1,0 +1,47 @@
+{
+    "os": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.6",
+    "heartbeatAt": "2026-01-01T06:32:04.152642",
+    "startedAt": "2026-01-01T06:32:01.991627",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "D:\\maharshi 2\\train_models.py",
+    "codePathLocal": "train_models.py",
+    "codePath": "train_models.py",
+    "host": "LAPTOP-NIDVGVK3",
+    "username": "Admin",
+    "executable": "D:\\maharshi 2\\env\\Scripts\\python.exe",
+    "cpu_count": 6,
+    "cpu_count_logical": 12,
+    "cpu_freq": {
+        "current": 2688.0,
+        "min": 0.0,
+        "max": 2688.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2688.0,
+            "min": 0.0,
+            "max": 2688.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 224.66796493530273,
+            "used": 195.4672622680664
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 2050",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 2050",
+            "memory_total": 4294967296
+        }
+    ],
+    "memory": {
+        "total": 7.729076385498047
+    }
+}

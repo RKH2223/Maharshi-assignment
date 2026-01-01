@@ -1,0 +1,26 @@
+
+
+
+Epoch 1/5:   0%|▍                                                                                                                | 8/2384 [00:23<37:05,  1.07it/s, loss=0.6707]Exception ignored in: <function _MultiProcessingDataLoaderIter.__del__ at 0x000001BBCA697560>
+Traceback (most recent call last):
+  File "D:\maharshi 2\env\Lib\site-packages\torch\utils\data\dataloader.py", line 1604, in __del__
+    self._shutdown_workers()
+  File "D:\maharshi 2\env\Lib\site-packages\torch\utils\data\dataloader.py", line 1568, in _shutdown_workers
+    w.join(timeout=_utils.MP_STATUS_CHECK_INTERVAL)
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\process.py", line 149, in join
+    res = self._popen.wait(timeout)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Admin\AppData\Local\Programs\Python\Python312\Lib\multiprocessing\popen_spawn_win32.py", line 112, in wait
+    res = _winapi.WaitForSingleObject(int(self._handle), msecs)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+KeyboardInterrupt:
+Epoch 1/5:   0%|▎                                                                                                              | 8/2384 [00:24<2:01:40,  3.07s/it, loss=0.6707]
+Traceback (most recent call last):
+  File "D:\maharshi 2\train_models.py", line 1021, in <module>
+    main()
+  File "D:\maharshi 2\train_models.py", line 956, in main
+    train_detection_model(
+  File "D:\maharshi 2\train_models.py", line 626, in train_detection_model
+    epoch_loss += losses.item()
+                  ^^^^^^^^^^^^^
+KeyboardInterrupt
