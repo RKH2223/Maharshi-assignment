@@ -1,18 +1,16 @@
+🧠 AI Technical Assignment – Computer Vision & OCR (Offline)
+📌 Overview
 
-# 🧠 AI Technical Assignment – Computer Vision & OCR (Offline)
-
-## 📌 Overview
-This project implements a fully offline Computer Vision and OCR system designed for industrial and hardware-constrained environments.  
+This project implements a fully offline Computer Vision and OCR system designed for industrial and hardware-constrained environments.
 The solution avoids cloud APIs and works entirely offline, making it suitable for edge or laptop deployment.
 
 The system includes:
-1. Human & Animal Detection (Video-based)
-2. Offline OCR for Industrial / Stenciled Text (Image-based)
 
----
+Human & Animal Detection (Video-based)
 
-## 📂 Project Structure
-''' text 
+Offline OCR for Industrial / Stenciled Text (Image-based)
+
+📂 Project Structure
 project/
 ├── datasets/
 │   ├── part_a/
@@ -29,133 +27,166 @@ project/
 ├── requirements.txt
 └── README.md
 
----
+📄 Assignment Deliverable – Single Python Script
 
-## 📄 Assignment Deliverable: Single Python Script Explanation
+This project uses a single consolidated Python script (main.py) that contains both explanation and implementation.
 
-This project includes a single consolidated Python script (main.py) that documents and implements the complete AI pipeline.
+The script includes:
 
-The script contains:
-- Well-commented, step-by-step explanations
-- Dataset and model selection justification
-- Explanation of training, inference, and OCR pipelines
-- Challenges faced and possible improvements
+Well-commented step-by-step explanations
 
-The goal is to ensure the solution is readable, reproducible, and suitable for real-world industrial deployment.
+Dataset and model selection justification
 
----
+Training, inference, and OCR pipeline explanation
 
-## 📊 Dataset Sources & Download Instructions
+Challenges faced and possible improvements
 
-### Part A: Human & Animal Detection Dataset
+The goal is to keep the solution readable, reproducible, and suitable for real-world industrial deployment.
+
+📊 Dataset Sources & Download Instructions
+Part A – Human & Animal Detection
 
 Dataset Source:
-Open Images Dataset V7  
+Open Images Dataset V7
 https://storage.googleapis.com/openimages/web/index.html
 
 Selected Classes:
-- Person
-- Dog
-- Cat
-- Horse
-- Elephant
-- Bear
+
+Person
+
+Dog
+
+Cat
+
+Horse
+
+Elephant
+
+Bear
 
 Download Commands Used:
 
 pip install openimages
 
-oid_v7_download --classes Person Dog Cat Horse Elephant Bear --type_data train validation --limit 5000 --dest datasets/part_a/
+oid_v7_download \
+--classes Person Dog Cat Horse Elephant Bear \
+--type_data train validation \
+--limit 5000 \
+--dest datasets/part_a/
+
 
 Annotations are used in Pascal VOC (XML) format.
 
----
+Part B – Industrial OCR Dataset
 
-### Part B: Industrial OCR Dataset
+The OCR dataset consists of industrial images containing:
 
-The OCR dataset consists of industrial-style images containing:
-- Painted or stenciled text
-- Faded markings
-- Low contrast
-- Surface damage
+Painted or stenciled text
+
+Faded markings
+
+Low contrast text
+
+Surface damage
 
 The entire OCR pipeline works fully offline.
 
----
+🧠 Model Selection & Justification
 
-## 🧠 Model Selection & Justification
+Detection Model:
 
-Detection:
-- Faster R-CNN (ResNet-50 backbone)
-- Selected for high localization accuracy and robustness
+Faster R-CNN with ResNet-50 backbone
 
-Classification:
-- ResNet-50 for Human vs Animal classification
+Chosen for accurate localization and robustness
 
-OCR:
-- EasyOCR
-- Selected for offline capability and robustness on degraded text
+Classification Model:
 
----
+ResNet-50 for Human vs Animal classification
 
-## 🏋️ Training Pipeline
+OCR Model:
 
-- Transfer learning with pretrained backbones
-- Dataset reduction for limited GPU memory
-- Batch size tuning to avoid CUDA OOM errors
-- Backbone freezing during fine-tuning
-- Metrics logging using Weights & Biases (wandb)
+EasyOCR
 
----
+Selected for offline operation and robustness on degraded text
 
-## 🎥 Inference Pipeline – Part A
+🏋️ Training Pipeline
 
-1. Videos placed in test_videos/
-2. Faster R-CNN detects objects
-3. ResNet-50 classifies Human vs Animal
-4. Annotated videos saved to outputs/annotated_videos/
+Transfer learning with pretrained backbones
 
----
+Dataset size reduction for limited GPU memory
 
-## 📝 OCR Pipeline – Part B
+Batch size tuning to prevent CUDA out-of-memory errors
 
-1. OpenCV preprocessing (grayscale, denoising, CLAHE, thresholding)
-2. EasyOCR text detection
-3. Bounding box extraction
-4. Outputs generated:
-   - Structured JSON
-   - Annotated image
+Backbone freezing during fine-tuning
+
+Metrics logging using Weights & Biases (wandb)
+
+🎥 Inference Pipeline – Part A
+
+Videos placed in test_videos/
+
+Faster R-CNN detects humans and animals
+
+ResNet-50 classifies detected objects
+
+Annotated videos saved to outputs/annotated_videos/
+
+📝 OCR Pipeline – Part B
+
+OpenCV preprocessing (grayscale, denoising, CLAHE, thresholding)
+
+EasyOCR text detection
+
+Bounding box extraction
+
+Outputs generated:
+
+Structured JSON
+
+Annotated image with bounding boxes
 
 outputs/ocr_results/
 ├── sample.json
 └── sample_annotated.jpg
 
----
+⚠️ Challenges Faced
 
-## ⚠️ Challenges Faced
+Limited GPU memory on laptop hardware
 
-- Limited GPU memory on laptop
-- CUDA out-of-memory errors
-- OCR accuracy on faded industrial text
-- Annotation inconsistencies
+CUDA out-of-memory issues during training
 
----
+OCR accuracy drop on faded industrial text
 
-## 🛠️ Possible Improvements
+Annotation inconsistencies in open datasets
 
-- Use lighter detection models for edge devices
-- Train a custom OCR model for industrial fonts
-- Apply stronger data augmentation
-- Optimize inference using ONNX or TensorRT
-- Deploy on embedded platforms
+🛠️ Possible Improvements
 
----
+Use lighter detection models for edge devices
 
-## 🧑‍💻 Author
+Train a custom OCR model for industrial fonts
+
+Apply stronger data augmentation
+
+Optimize inference using ONNX or TensorRT
+
+Deploy on embedded or edge AI platforms
+
+🧑‍💻 Author
+
 Ravi Kanani
 
----
+📜 License
 
-## 📜 License
 Educational and evaluation use only.
-"@ | Out-File -Encoding UTF8 README.md
+
+✅ What to do now
+
+Paste this into README.md
+
+Save the file
+
+Run:
+
+git add README.md
+git commit -m "Add complete project README"
+git push
